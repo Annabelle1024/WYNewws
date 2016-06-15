@@ -72,6 +72,9 @@ static NSString *cellId = @"cellId";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
+    // 设置模型
+    
+    
     cell.textLabel.text = _newsList[indexPath.row].title;
     
     return cell;
