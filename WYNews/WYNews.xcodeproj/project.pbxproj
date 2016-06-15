@@ -27,6 +27,8 @@
 		1385DC211D0FEBDA0091DF42 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DC111D0FEBDA0091DF42 /* UIView+CZAddition.m */; };
 		1385DC221D0FEBDA0091DF42 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DC131D0FEBDA0091DF42 /* UIViewController+CZAddition.m */; };
 		1385DC231D0FEBDA0091DF42 /* CZNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DC161D0FEBDA0091DF42 /* CZNetworkManager.m */; };
+		1385DC2C1D0FF1B30091DF42 /* WYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DC2B1D0FF1B30091DF42 /* WYMainViewController.m */; };
+		1385DC2F1D0FF1F30091DF42 /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DC2E1D0FF1F30091DF42 /* WYHomeViewController.m */; };
 		3F48837F956CB46873BC925D /* libPods-WYNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B060FB7BC2D0874487B40A /* libPods-WYNews.a */; };
 		41C63E1E5455BEB164ABB85E /* libPods-WYNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDC5B05C723B107FB30E9E4 /* libPods-WYNewsTests.a */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,10 @@
 		1385DC131D0FEBDA0091DF42 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		1385DC151D0FEBDA0091DF42 /* CZNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNetworkManager.h; sourceTree = "<group>"; };
 		1385DC161D0FEBDA0091DF42 /* CZNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNetworkManager.m; sourceTree = "<group>"; };
+		1385DC2A1D0FF1B30091DF42 /* WYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMainViewController.h; sourceTree = "<group>"; };
+		1385DC2B1D0FF1B30091DF42 /* WYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMainViewController.m; sourceTree = "<group>"; };
+		1385DC2D1D0FF1F30091DF42 /* WYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHomeViewController.h; sourceTree = "<group>"; };
+		1385DC2E1D0FF1F30091DF42 /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
 		18452A74E90E958131B4F2AC /* Pods-WYNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsTests/Pods-WYNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18D9080CF1D486C2C72A885F /* Pods-WYNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNews/Pods-WYNews.debug.xcconfig"; sourceTree = "<group>"; };
 		5EDC5B05C723B107FB30E9E4 /* libPods-WYNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +142,7 @@
 				1385DBD61D0FE7AA0091DF42 /* AppDelegate.h */,
 				1385DBD71D0FE7AA0091DF42 /* AppDelegate.m */,
 				1385DBF91D0FEBDA0091DF42 /* Tools */,
-				1385DBF81D0FEBC70091DF42 /* Classes */,
+				1385DC271D0FF1B30091DF42 /* Classes */,
 				1385DBD91D0FE7AA0091DF42 /* ViewController.h */,
 				1385DBDA1D0FE7AA0091DF42 /* ViewController.m */,
 				1385DBDC1D0FE7AA0091DF42 /* Main.storyboard */,
@@ -163,13 +169,6 @@
 				1385DBEF1D0FE7AA0091DF42 /* Info.plist */,
 			);
 			path = WYNewsTests;
-			sourceTree = "<group>";
-		};
-		1385DBF81D0FEBC70091DF42 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		1385DBF91D0FEBDA0091DF42 /* Tools */ = {
@@ -220,6 +219,51 @@
 				1385DC161D0FEBDA0091DF42 /* CZNetworkManager.m */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		1385DC271D0FF1B30091DF42 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1385DC291D0FF1B30091DF42 /* Main */,
+				1385DC281D0FF1B30091DF42 /* Home */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1385DC281D0FF1B30091DF42 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1385DC301D0FF2120091DF42 /* NewsDetail(新闻列表) */,
+				1385DC311D0FF2120091DF42 /* NewsList(新闻详情) */,
+				1385DC2D1D0FF1F30091DF42 /* WYHomeViewController.h */,
+				1385DC2E1D0FF1F30091DF42 /* WYHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1385DC291D0FF1B30091DF42 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1385DC2A1D0FF1B30091DF42 /* WYMainViewController.h */,
+				1385DC2B1D0FF1B30091DF42 /* WYMainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1385DC301D0FF2120091DF42 /* NewsDetail(新闻列表) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "NewsDetail(新闻列表)";
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		1385DC311D0FF2120091DF42 /* NewsList(新闻详情) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "NewsList(新闻详情)";
+			path = NewsList;
 			sourceTree = "<group>";
 		};
 		4008FF10C716E82C127F2E5F /* Pods */ = {
@@ -451,6 +495,7 @@
 				1385DC171D0FEBDA0091DF42 /* NSArray+Log.m in Sources */,
 				1385DC181D0FEBDA0091DF42 /* NSAttributedString+CZAdditon.m in Sources */,
 				1385DC1C1D0FEBDA0091DF42 /* NSString+CZPath.m in Sources */,
+				1385DC2C1D0FF1B30091DF42 /* WYMainViewController.m in Sources */,
 				1385DC1A1D0FEBDA0091DF42 /* NSString+CZBase64.m in Sources */,
 				1385DC1E1D0FEBDA0091DF42 /* UIColor+CZAddition.m in Sources */,
 				1385DBD81D0FE7AA0091DF42 /* AppDelegate.m in Sources */,
@@ -458,6 +503,7 @@
 				1385DBD51D0FE7AA0091DF42 /* main.m in Sources */,
 				1385DC201D0FEBDA0091DF42 /* UIScreen+CZAddition.m in Sources */,
 				1385DC191D0FEBDA0091DF42 /* NSObject+CZRuntime.m in Sources */,
+				1385DC2F1D0FF1F30091DF42 /* WYHomeViewController.m in Sources */,
 				1385DC211D0FEBDA0091DF42 /* UIView+CZAddition.m in Sources */,
 				1385DC231D0FEBDA0091DF42 /* CZNetworkManager.m in Sources */,
 			);
