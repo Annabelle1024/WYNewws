@@ -22,13 +22,11 @@
     _window = [[UIWindow alloc] init];
     _window.backgroundColor = [UIColor whiteColor];
     
-    Class cls = NSClassFromString(@"WYMainViewController");
+    Class cls = NSClassFromString(@"WYNewsListViewController");
     NSAssert(cls != nil, @"传入类名错误");
     
     UIViewController *vc = [[cls alloc] init];
-    
-    // UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    
+        
     _window.rootViewController = vc;
     
     [_window makeKeyAndVisible];
