@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *replyCountLabel;
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageSetView;
+
+
 
 @end

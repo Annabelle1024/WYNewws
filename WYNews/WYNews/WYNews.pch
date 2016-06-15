@@ -12,5 +12,7 @@
 #import <NSObject+YYModel.h>
 #import "YJAdditions.h"
 #import "YJNetworkManager.h"
+#import <UIImageView+WebCache.h>
+
 
 #endif

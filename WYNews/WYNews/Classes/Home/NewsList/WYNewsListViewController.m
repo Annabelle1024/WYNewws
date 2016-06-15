@@ -8,8 +8,11 @@
 
 #import "WYNewsListViewController.h"
 #import "WYNewsList.h"
+#import "WYNewsCell.h"
 
-static NSString *cellId = @"cellId";
+
+static NSString *normalCellId = @"normalCellId";
+static NSString *imageSetCellId = @"imageSetCellId";
 
 @interface WYNewsListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -70,12 +73,44 @@ static NSString *cellId = @"cellId";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    // 获取模型
+    WYNewsList *model = _newsList[indexPath.row];
     
-    // 设置模型
+    NSString *cellId;
     
+    if (model.imgextra.count > 0) {
+        cellId = imageSetCellId;
+    } else {
+        cellId = normalCellId;
+    }
     
-    cell.textLabel.text = _newsList[indexPath.row].title;
+    WYNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    
+    // 设置数据
+    cell.titleLabel.text = model.title;
+    cell.sourceLabel.text = model.source;
+    cell.replyCountLabel.text = @(model.replyCount).description;
+    
+    // 设置图片
+    NSURL *iconURL = [NSURL URLWithString:model.imgsrc];
+    [cell.iconView sd_setImageWithURL:iconURL];
+    
+    // 设置多图图片
+    if (model.imgextra != nil) {
+        
+        NSInteger index = 0;
+        
+        for (NSDictionary *dict in model.imgextra) {
+            
+            NSString *urlString = dict[@"imgsrc"];
+            NSURL *url = [NSURL URLWithString:urlString];
+            
+            [cell.imageSetView[index] sd_setImageWithURL:url];
+            
+            index ++;
+        }
+        
+    }
     
     return cell;
     
@@ -92,7 +127,10 @@ static NSString *cellId = @"cellId";
         make.edges.equalTo(self.view);
     }];
     
-    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+    // [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:normalCellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsImageSetCell" bundle:nil] forCellReuseIdentifier:imageSetCellId];
+    
     
     tv.dataSource = self;
     tv.delegate = self;

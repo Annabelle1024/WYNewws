@@ -10,6 +10,7 @@
 		13090C4E1D1196FC0094DC0F /* WYNewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 13090C4D1D1196FC0094DC0F /* WYNewsList.m */; };
 		13090C531D119A040094DC0F /* WYNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13090C521D119A040094DC0F /* WYNewsCell.m */; };
 		13090C551D119A2E0094DC0F /* WYNewsNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13090C541D119A2E0094DC0F /* WYNewsNormalCell.xib */; };
+		13090C571D11A0E70094DC0F /* WYNewsImageSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13090C561D11A0E70094DC0F /* WYNewsImageSetCell.xib */; };
 		1385DBD51D0FE7AA0091DF42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBD41D0FE7AA0091DF42 /* main.m */; };
 		1385DBD81D0FE7AA0091DF42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBD71D0FE7AA0091DF42 /* AppDelegate.m */; };
 		1385DBDB1D0FE7AA0091DF42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBDA1D0FE7AA0091DF42 /* ViewController.m */; };
@@ -54,6 +55,7 @@
 		13090C511D119A040094DC0F /* WYNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsCell.h; sourceTree = "<group>"; };
 		13090C521D119A040094DC0F /* WYNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsCell.m; sourceTree = "<group>"; };
 		13090C541D119A2E0094DC0F /* WYNewsNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsNormalCell.xib; sourceTree = "<group>"; };
+		13090C561D11A0E70094DC0F /* WYNewsImageSetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsImageSetCell.xib; sourceTree = "<group>"; };
 		1385DBD01D0FE7AA0091DF42 /* WYNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1385DBD41D0FE7AA0091DF42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1385DBD61D0FE7AA0091DF42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				13090C511D119A040094DC0F /* WYNewsCell.h */,
 				13090C521D119A040094DC0F /* WYNewsCell.m */,
 				13090C541D119A2E0094DC0F /* WYNewsNormalCell.xib */,
+				13090C561D11A0E70094DC0F /* WYNewsImageSetCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				1385DBE31D0FE7AA0091DF42 /* LaunchScreen.storyboard in Resources */,
 				1385DBE01D0FE7AA0091DF42 /* Assets.xcassets in Resources */,
 				1385DBDE1D0FE7AA0091DF42 /* Main.storyboard in Resources */,
+				13090C571D11A0E70094DC0F /* WYNewsImageSetCell.xib in Resources */,
 				13090C551D119A2E0094DC0F /* WYNewsNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
