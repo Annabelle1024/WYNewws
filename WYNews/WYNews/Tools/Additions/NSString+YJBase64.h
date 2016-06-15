@@ -1,5 +1,5 @@
 //
-//  NSString+CZBase64.h
+//  NSString+YJBase64.h
 //
 //  Created by Annabelle on 16/6/10.
 //  Copyright © 2016年 annabelle. All rights reserved.

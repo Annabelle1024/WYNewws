@@ -69,7 +69,7 @@
     
     // 设置一个导航栏按钮的 高亮图片
     NSString *imageNameHL = [NSString stringWithFormat:@"tabbar_icon_%@_highlight", dict[@"imageName"]];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:imageNameHL];
+    vc.tabBarItem.selectedImage = [[UIImage imageNamed:imageNameHL] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     return [[UINavigationController alloc] initWithRootViewController:vc];
     

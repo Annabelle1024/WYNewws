@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YJAdditions.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 //    sleep(4);
+    [self setupAppearance];
     
     _window = [[UIWindow alloc] init];
     _window.backgroundColor = [UIColor whiteColor];
@@ -36,9 +38,9 @@
     return YES;
 }
 
-//- (void)setupAppearance {
-//    
-//    
-//}
+- (void)setupAppearance {
+    
+    [UITabBar appearance].tintColor = [UIColor yj_colorWithHex:0xDF0000];
+}
 
 @end
