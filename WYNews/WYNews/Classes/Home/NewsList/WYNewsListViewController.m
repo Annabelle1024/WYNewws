@@ -33,9 +33,6 @@ static NSString *imageSetCellId = @"imageSetCellId";
     [super viewDidLoad];
     
     _category = @"T1348647853363";
-
-#warning TOASK 这是咋的了? 不输出了?
-    NSLog(@"你还能不能出来了");
     
     [self loadData];
     [self setupUI];
@@ -62,6 +59,15 @@ static NSString *imageSetCellId = @"imageSetCellId";
         [self.tableView reloadData];
         
     }];
+}
+
+#pragma mark - 设置代理 UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+#warning TODO 跳转控制器
+    // 跳转控制器
 }
 
 #pragma mark - 设置数据源
@@ -137,6 +143,8 @@ static NSString *imageSetCellId = @"imageSetCellId";
     
     tv.estimatedRowHeight = 100;
     tv.rowHeight = UITableViewAutomaticDimension;
+    
+    tv.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     _tableView = tv;
     

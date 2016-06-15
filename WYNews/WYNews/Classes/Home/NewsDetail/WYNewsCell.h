@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageSetView;
 
 
+@property (weak, nonatomic) IBOutlet UIView *sepLineView;
 
 @end
