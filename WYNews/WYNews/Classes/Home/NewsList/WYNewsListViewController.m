@@ -7,17 +7,23 @@
 //
 
 #import "WYNewsListViewController.h"
+#import "WYNewsList.h"
 
 static NSString *cellId = @"cellId";
 
 @interface WYNewsListViewController () <UITableViewDataSource, UITableViewDelegate>
 
+/// 表格视图
+@property (nonatomic, weak) UITableView *tableView;
+/// 新闻数据数组
+@property (nonatomic, strong) NSMutableArray <WYNewsList *> *newsList;
+
 @end
 
 @implementation WYNewsListViewController {
     
-    UITableView *_tableView;
     NSString *_category;
+
 }
 
 - (void)viewDidLoad {
@@ -43,13 +49,22 @@ static NSString *cellId = @"cellId";
     [[YJNetworkManager sharedManager] newsListWithCategory:_category startIndex:0 completion:^(NSArray *array, NSError *error) {
         NSLog(@"%@", array);
         
+        // 字典转模型
+        NSArray *list = [NSArray yy_modelArrayWithClass:[WYNewsList class] json:array];
+        
+        // 设置属性 (newsList是可变数组, list是不可变数组, --> 要转换)
+        self.newsList = [NSMutableArray arrayWithArray:list];
+        
+        // 刷新数据
+        [self.tableView reloadData];
+        
     }];
 }
 
 #pragma mark - 设置数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 20;
+    return _newsList.count;
     
 }
 
@@ -57,7 +72,7 @@ static NSString *cellId = @"cellId";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    cell.textLabel.text = @(indexPath.row).description;
+    cell.textLabel.text = _newsList[indexPath.row].title;
     
     return cell;
     

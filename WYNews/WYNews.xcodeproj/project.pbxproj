@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13090C4E1D1196FC0094DC0F /* WYNewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 13090C4D1D1196FC0094DC0F /* WYNewsList.m */; };
 		1385DBD51D0FE7AA0091DF42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBD41D0FE7AA0091DF42 /* main.m */; };
 		1385DBD81D0FE7AA0091DF42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBD71D0FE7AA0091DF42 /* AppDelegate.m */; };
 		1385DBDB1D0FE7AA0091DF42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385DBDA1D0FE7AA0091DF42 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13090C4C1D1196FC0094DC0F /* WYNewsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsList.h; sourceTree = "<group>"; };
+		13090C4D1D1196FC0094DC0F /* WYNewsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsList.m; sourceTree = "<group>"; };
 		1385DBD01D0FE7AA0091DF42 /* WYNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1385DBD41D0FE7AA0091DF42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1385DBD61D0FE7AA0091DF42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13090C4F1D1197050094DC0F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				13090C4C1D1196FC0094DC0F /* WYNewsList.h */,
+				13090C4D1D1196FC0094DC0F /* WYNewsList.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		1385DBC71D0FE7AA0091DF42 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +232,7 @@
 		1385DC301D0FF2120091DF42 /* NewsDetail(新闻列表) */ = {
 			isa = PBXGroup;
 			children = (
+				13090C4F1D1197050094DC0F /* model */,
 				138F667E1D116DBF0093A441 /* WYNewsListViewController.h */,
 				138F667F1D116DBF0093A441 /* WYNewsListViewController.m */,
 			);
@@ -506,6 +519,7 @@
 				138F66791D11658F0093A441 /* UILabel+YJAddition.m in Sources */,
 				138F66761D11658F0093A441 /* NSString+YJPath.m in Sources */,
 				1385DC2C1D0FF1B30091DF42 /* WYMainViewController.m in Sources */,
+				13090C4E1D1196FC0094DC0F /* WYNewsList.m in Sources */,
 				138F66721D11658F0093A441 /* NSAttributedString+YJAdditon.m in Sources */,
 				138F66731D11658F0093A441 /* NSObject+YJAddition.m in Sources */,
 				1385DBD81D0FE7AA0091DF42 /* AppDelegate.m in Sources */,
