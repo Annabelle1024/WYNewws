@@ -22,6 +22,8 @@ static NSString *cellId = @"cellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+     _urlString = @"http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html";
+    
     [self setupUI];
 }
 

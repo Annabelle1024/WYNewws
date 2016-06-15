@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+// 不同的 新闻页面 使用 不同的 url 来加载数据
+
 @interface WYNewsListViewController : UIViewController
+
+@property (nonatomic, copy) NSString *urlString;
 
 @end
