@@ -88,6 +88,7 @@
 		138F666D1D11658F0093A441 /* UIViewController+YJAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YJAddition.h"; sourceTree = "<group>"; };
 		138F666E1D11658F0093A441 /* UIViewController+YJAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YJAddition.m"; sourceTree = "<group>"; };
 		138F666F1D11658F0093A441 /* YJAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAdditions.h; sourceTree = "<group>"; };
+		138F667D1D116B0B0093A441 /* WYNews.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYNews.pch; sourceTree = "<group>"; };
 		18452A74E90E958131B4F2AC /* Pods-WYNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsTests/Pods-WYNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18D9080CF1D486C2C72A885F /* Pods-WYNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNews/Pods-WYNews.debug.xcconfig"; sourceTree = "<group>"; };
 		5EDC5B05C723B107FB30E9E4 /* libPods-WYNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,8 +144,6 @@
 				1385DBD71D0FE7AA0091DF42 /* AppDelegate.m */,
 				1385DBF91D0FEBDA0091DF42 /* Tools */,
 				1385DC271D0FF1B30091DF42 /* Classes */,
-				1385DBD91D0FE7AA0091DF42 /* ViewController.h */,
-				1385DBDA1D0FE7AA0091DF42 /* ViewController.m */,
 				1385DBD31D0FE7AA0091DF42 /* Supporting Files */,
 			);
 			path = WYNews;
@@ -153,11 +152,14 @@
 		1385DBD31D0FE7AA0091DF42 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1385DBD91D0FE7AA0091DF42 /* ViewController.h */,
+				1385DBDA1D0FE7AA0091DF42 /* ViewController.m */,
 				1385DBDC1D0FE7AA0091DF42 /* Main.storyboard */,
 				1385DBDF1D0FE7AA0091DF42 /* Assets.xcassets */,
 				1385DBE11D0FE7AA0091DF42 /* LaunchScreen.storyboard */,
 				1385DBE41D0FE7AA0091DF42 /* Info.plist */,
 				1385DBD41D0FE7AA0091DF42 /* main.m */,
+				138F667D1D116B0B0093A441 /* WYNews.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -564,8 +566,10 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = WYNews/WYNews.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -608,7 +612,9 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = WYNews/WYNews.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

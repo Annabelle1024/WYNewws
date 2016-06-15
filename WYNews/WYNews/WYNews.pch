@@ -1,0 +1,15 @@
+//
+//  WYNews.pch
+//  WYNews
+//
+//  Created by Annabelle on 16/6/15.
+//  Copyright © 2016年 annabelle. All rights reserved.
+//
+
+#if __OBJC__
+
+#import <Masonry.h>
+#import <NSObject+YYModel.h>
+#import "YJAdditions.h"
+
+#endif
