@@ -1,8 +1,8 @@
 //
 //  NSString+Hash.h
 //
-//  Created by 刘凡 on 14/11/12.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Created by Annabelle on 16/6/10.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,7 @@
  *
  *  @return 32个字符的MD5散列字符串
  */
-- (NSString *)cz_md5String;
+- (NSString *)yj_md5String;
 
 /**
  *  计算SHA1散列结果
@@ -34,7 +34,7 @@
  *
  *  @return 40个字符的SHA1散列字符串
  */
-- (NSString *)cz_sha1String;
+- (NSString *)yj_sha1String;
 
 /**
  *  计算SHA224散列结果
@@ -46,7 +46,7 @@
  *
  *  @return 56个字符的SHA224散列字符串
  */
-- (NSString *)cz_sha224String;
+- (NSString *)yj_sha224String;
 
 /**
  *  计算SHA256散列结果
@@ -58,7 +58,7 @@
  *
  *  @return 64个字符的SHA256散列字符串
  */
-- (NSString *)cz_sha256String;
+- (NSString *)yj_sha256String;
 
 /**
  *  计算SHA 384散列结果
@@ -70,7 +70,7 @@
  *
  *  @return 96个字符的SHA 384散列字符串
  */
-- (NSString *)cz_sha384String;
+- (NSString *)yj_sha384String;
 
 /**
  *  计算SHA 512散列结果
@@ -82,7 +82,7 @@
  *
  *  @return 128个字符的SHA 512散列字符串
  */
-- (NSString *)cz_sha512String;
+- (NSString *)yj_sha512String;
 
 #pragma mark - HMAC 散列函数
 /**
@@ -95,7 +95,7 @@
  *
  *  @return 32个字符的HMAC MD5散列字符串
  */
-- (NSString *)cz_hmacMD5StringWithKey:(NSString *)key;
+- (NSString *)yj_hmacMD5StringWithKey:(NSString *)key;
 
 /**
  *  计算HMAC SHA1散列结果
@@ -107,7 +107,7 @@
  *
  *  @return 40个字符的HMAC SHA1散列字符串
  */
-- (NSString *)cz_hmacSHA1StringWithKey:(NSString *)key;
+- (NSString *)yj_hmacSHA1StringWithKey:(NSString *)key;
 
 /**
  *  计算HMAC SHA256散列结果
@@ -119,7 +119,7 @@
  *
  *  @return 64个字符的HMAC SHA256散列字符串
  */
-- (NSString *)cz_hmacSHA256StringWithKey:(NSString *)key;
+- (NSString *)yj_hmacSHA256StringWithKey:(NSString *)key;
 
 /**
  *  计算HMAC SHA512散列结果
@@ -131,7 +131,7 @@
  *
  *  @return 128个字符的HMAC SHA512散列字符串
  */
-- (NSString *)cz_hmacSHA512StringWithKey:(NSString *)key;
+- (NSString *)yj_hmacSHA512StringWithKey:(NSString *)key;
 
 #pragma mark - 文件散列函数
 
@@ -145,7 +145,7 @@
  *
  *  @return 32个字符的MD5散列字符串
  */
-- (NSString *)cz_fileMD5Hash;
+- (NSString *)yj_fileMD5Hash;
 
 /**
  *  计算文件的SHA1散列结果
@@ -157,7 +157,7 @@
  *
  *  @return 40个字符的SHA1散列字符串
  */
-- (NSString *)cz_fileSHA1Hash;
+- (NSString *)yj_fileSHA1Hash;
 
 /**
  *  计算文件的SHA256散列结果
@@ -169,7 +169,7 @@
  *
  *  @return 64个字符的SHA256散列字符串
  */
-- (NSString *)cz_fileSHA256Hash;
+- (NSString *)yj_fileSHA256Hash;
 
 /**
  *  计算文件的SHA512散列结果
@@ -181,6 +181,6 @@
  *
  *  @return 128个字符的SHA512散列字符串
  */
-- (NSString *)cz_fileSHA512Hash;
+- (NSString *)yj_fileSHA512Hash;
 
 @end

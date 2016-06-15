@@ -1,15 +1,15 @@
 //
-//  NSAttributedString+CZAdditon.m
+//  NSAttributedString+YJAdditon.m
 //
-//  Created by 刘凡 on 16/4/26.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by Annabelle on 16/5/28.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
-#import "NSAttributedString+CZAdditon.h"
+#import "NSAttributedString+YJAdditon.h"
 
-@implementation NSAttributedString (CZAdditon)
+@implementation NSAttributedString (YJAdditon)
 
-+ (instancetype)cz_imageTextWithImage:(UIImage *)image imageWH:(CGFloat)imageWH title:(NSString *)title fontSize:(CGFloat)fontSize titleColor:(UIColor *)titleColor spacing:(CGFloat)spacing {
++ (instancetype)yj_imageTextWithImage:(UIImage *)image imageWH:(CGFloat)imageWH title:(NSString *)title fontSize:(CGFloat)fontSize titleColor:(UIColor *)titleColor spacing:(CGFloat)spacing {
     
     // 文本字典
     NSDictionary *titleDict = @{NSFontAttributeName: [UIFont systemFontOfSize:fontSize],

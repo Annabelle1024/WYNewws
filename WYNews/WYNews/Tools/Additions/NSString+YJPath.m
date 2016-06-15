@@ -1,27 +1,27 @@
 //
-//  NSString+CZPath.m
+//  NSString+YJPath.m
 //
-//  Created by 刘凡 on 16/6/10.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by Annabelle on 16/6/10.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
-#import "NSString+CZPath.h"
+#import "NSString+YJPath.h"
 
-@implementation NSString (CZPath)
+@implementation NSString (YJPath)
 
-- (NSString *)cz_appendDocumentDir {
+- (NSString *)yj_appendDocumentDir {
     NSString *dir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
     
     return [dir stringByAppendingPathComponent:self.lastPathComponent];
 }
 
-- (NSString *)cz_appendCacheDir {
+- (NSString *)yj_appendCacheDir {
     NSString *dir = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
     
     return [dir stringByAppendingPathComponent:self.lastPathComponent];
 }
 
-- (NSString *)cz_appendTempDir {
+- (NSString *)yj_appendTempDir {
     NSString *dir = NSTemporaryDirectory();
     
     return [dir stringByAppendingPathComponent:self.lastPathComponent];

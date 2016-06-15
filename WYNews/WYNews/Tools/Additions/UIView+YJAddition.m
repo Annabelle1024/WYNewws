@@ -1,15 +1,15 @@
 //
-//  UIView+CZAddition.m
+//  UIView+YJAddition.m
 //
-//  Created by 刘凡 on 16/5/11.
-//  Copyright © 2016年 itheima. All rights reserved.
+//  Created by Annabelle on 16/5/28.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
-#import "UIView+CZAddition.h"
+#import "UIView+YJAddition.h"
 
-@implementation UIView (CZAddition)
+@implementation UIView (YJAddition)
 
-- (UIImage *)cz_snapshotImage {
+- (UIImage *)yj_snapshotImage {
 
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0);
     

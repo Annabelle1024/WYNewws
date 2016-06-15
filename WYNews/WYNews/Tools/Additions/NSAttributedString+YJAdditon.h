@@ -1,13 +1,13 @@
 //
-//  NSAttributedString+CZAdditon.h
+//  NSAttributedString+YJAdditon.h
 //
-//  Created by 刘凡 on 16/4/26.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by Annabelle on 16/5/28.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface NSAttributedString (CZAdditon)
+@interface NSAttributedString (YJAdditon)
 
 /// 使用图像和文本生成上下排列的属性文本
 ///
@@ -19,7 +19,7 @@
 /// @param spacing    图像和标题间距
 ///
 /// @return 属性文本
-+ (instancetype)cz_imageTextWithImage:(UIImage *)image
++ (instancetype)yj_imageTextWithImage:(UIImage *)image
                               imageWH:(CGFloat)imageWH
                                 title:(NSString *)title
                              fontSize:(CGFloat)fontSize

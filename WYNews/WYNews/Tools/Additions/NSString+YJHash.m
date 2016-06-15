@@ -1,17 +1,17 @@
 //
 //  NSString+Hash.m
 //
-//  Created by 刘凡 on 14/11/12.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Created by Annabelle on 16/6/10.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
-#import "NSString+CZHash.h"
+#import "NSString+YJHash.h"
 #import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSString (Hash)
 
 #pragma mark - 散列函数
-- (NSString *)cz_md5String {
+- (NSString *)yj_md5String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_MD5_DIGEST_LENGTH];
     
@@ -20,7 +20,7 @@
     return [self stringFromBytes:buffer length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_sha1String {
+- (NSString *)yj_sha1String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_SHA1_DIGEST_LENGTH];
     
@@ -29,7 +29,7 @@
     return [self stringFromBytes:buffer length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_sha224String {
+- (NSString *)yj_sha224String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_SHA224_DIGEST_LENGTH];
     
@@ -38,7 +38,7 @@
     return [self stringFromBytes:buffer length:CC_SHA224_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_sha256String {
+- (NSString *)yj_sha256String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_SHA256_DIGEST_LENGTH];
     
@@ -47,7 +47,7 @@
     return [self stringFromBytes:buffer length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_sha384String {
+- (NSString *)yj_sha384String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_SHA384_DIGEST_LENGTH];
     
@@ -56,7 +56,7 @@
     return [self stringFromBytes:buffer length:CC_SHA384_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_sha512String {
+- (NSString *)yj_sha512String {
     const char *str = self.UTF8String;
     uint8_t buffer[CC_SHA512_DIGEST_LENGTH];
     
@@ -66,7 +66,7 @@
 }
 
 #pragma mark - HMAC 散列函数
-- (NSString *)cz_hmacMD5StringWithKey:(NSString *)key {
+- (NSString *)yj_hmacMD5StringWithKey:(NSString *)key {
     const char *keyData = key.UTF8String;
     const char *strData = self.UTF8String;
     uint8_t buffer[CC_MD5_DIGEST_LENGTH];
@@ -76,7 +76,7 @@
     return [self stringFromBytes:buffer length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_hmacSHA1StringWithKey:(NSString *)key {
+- (NSString *)yj_hmacSHA1StringWithKey:(NSString *)key {
     const char *keyData = key.UTF8String;
     const char *strData = self.UTF8String;
     uint8_t buffer[CC_SHA1_DIGEST_LENGTH];
@@ -86,7 +86,7 @@
     return [self stringFromBytes:buffer length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_hmacSHA256StringWithKey:(NSString *)key {
+- (NSString *)yj_hmacSHA256StringWithKey:(NSString *)key {
     const char *keyData = key.UTF8String;
     const char *strData = self.UTF8String;
     uint8_t buffer[CC_SHA256_DIGEST_LENGTH];
@@ -96,7 +96,7 @@
     return [self stringFromBytes:buffer length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_hmacSHA512StringWithKey:(NSString *)key {
+- (NSString *)yj_hmacSHA512StringWithKey:(NSString *)key {
     const char *keyData = key.UTF8String;
     const char *strData = self.UTF8String;
     uint8_t buffer[CC_SHA512_DIGEST_LENGTH];
@@ -110,7 +110,7 @@
 
 #define FileHashDefaultChunkSizeForReadingData 4096
 
-- (NSString *)cz_fileMD5Hash {
+- (NSString *)yj_fileMD5Hash {
     NSFileHandle *fp = [NSFileHandle fileHandleForReadingAtPath:self];
     if (fp == nil) {
         return nil;
@@ -138,7 +138,7 @@
     return [self stringFromBytes:buffer length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_fileSHA1Hash {
+- (NSString *)yj_fileSHA1Hash {
     NSFileHandle *fp = [NSFileHandle fileHandleForReadingAtPath:self];
     if (fp == nil) {
         return nil;
@@ -166,7 +166,7 @@
     return [self stringFromBytes:buffer length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_fileSHA256Hash {
+- (NSString *)yj_fileSHA256Hash {
     NSFileHandle *fp = [NSFileHandle fileHandleForReadingAtPath:self];
     if (fp == nil) {
         return nil;
@@ -194,7 +194,7 @@
     return [self stringFromBytes:buffer length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSString *)cz_fileSHA512Hash {
+- (NSString *)yj_fileSHA512Hash {
     NSFileHandle *fp = [NSFileHandle fileHandleForReadingAtPath:self];
     if (fp == nil) {
         return nil;

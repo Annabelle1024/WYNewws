@@ -1,15 +1,14 @@
 //
-//  UIButton+CZAddition.m
+//  UIButton+YJAddition.m
 //
-//  Created by 刘凡 on 16/5/17.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by Annabelle on 16/5/28.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
+#import "UIButton+YJAddition.h"
 
-#import "UIButton+CZAddition.h"
+@implementation UIButton (YJAddition)
 
-@implementation UIButton (CZAddition)
-
-+ (instancetype)cz_textButton:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor {
++ (instancetype)yj_textButton:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor {
     
     UIButton *button = [[self alloc] init];
     

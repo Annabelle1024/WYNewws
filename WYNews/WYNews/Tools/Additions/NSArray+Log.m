@@ -1,8 +1,8 @@
 //
 //  NSArray+Log.m
 //
-//  Created by 刘凡 on 16/5/18.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by Annabelle on 16/5/28.
+//  Copyright © 2016年 annabelle. All rights reserved.
 //
 
 #import "NSArray+Log.h"
