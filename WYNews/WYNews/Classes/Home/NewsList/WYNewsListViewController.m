@@ -17,19 +17,30 @@ static NSString *cellId = @"cellId";
 @implementation WYNewsListViewController {
     
     UITableView *_tableView;
+    NSString *_category;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     _urlString = @"http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html";
+    _category = @"T1348647853363";
     
+    [self loadData];
     [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 加载数据
+- (void)loadData {
+    
+    [[YJNetworkManager sharedManager] newsListWithCategory:_category startIndex:0 completion:^(NSArray *array, NSError *error) {
+        NSLog(@"%@", array);
+        
+    }];
 }
 
 #pragma mark - 设置数据源

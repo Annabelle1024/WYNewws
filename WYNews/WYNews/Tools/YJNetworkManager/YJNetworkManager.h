@@ -16,5 +16,6 @@
 + (instancetype)sharedManager;
 
 // 接口方法
+- (void)newsListWithCategory:(NSString *)category startIndex:(NSInteger)startIdx completion:(void (^)(NSArray *, NSError *))completion;
 
 @end
