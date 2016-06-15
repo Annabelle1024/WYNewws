@@ -24,6 +24,9 @@ static NSString *cellId = @"cellId";
     [super viewDidLoad];
     
     _category = @"T1348647853363";
+
+#warning TOASK 这是咋的了? 不输出了?
+    NSLog(@"你还能不能出来了");
     
     [self loadData];
     [self setupUI];

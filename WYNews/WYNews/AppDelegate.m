@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
     
 //    sleep(4);
     [self setupAppearance];
+    
+    // 设置网络加载指示器
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     _window = [[UIWindow alloc] init];
     _window.backgroundColor = [UIColor whiteColor];
